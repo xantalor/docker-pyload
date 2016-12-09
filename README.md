@@ -1,22 +1,14 @@
 Docker-Pyload
 =============
 
-[![](https://images.microbadger.com/badges/image/jahroots/docker-pyload.svg)](https://microbadger.com/images/jahroots/docker-pyload "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/jahroots/docker-pyload.svg)](https://microbadger.com/images/jahroots/docker-pyload "Get your own version badge on microbadger.com")
-
-Sets up a container with [pyload](http://pyload.org/) and ssh-server installed listening on 8000,7227 and 22.
+Sets up a container with [pyload](https://github.com/pyload/pyload) installed listening on 8000 and 7227.
 
 Usage
 =============
 
-To run the container, do the following:
-
-    docker run -d -P jahroots/docker-pyload
-
-    CONTAINER ID        IMAGE                           COMMAND                CREATED             STATUS              PORTS                                                                     NAMES
-    3ba228da04ad        jahroots/docker-pyload:latest   /usr/bin/supervisord   4 seconds ago       Up 3 seconds        0.0.0.0:49165->22/tcp, 0.0.0.0:49166->7227/tcp, 0.0.0.0:49167->8000/tcp
+With the script pyload.sh you can build, run, start, stop and remove the container from docker:
+    pyload.py {build, run, start, stop, remove}
     
-    
-Your pyload instance is now available by going to http://localhost:49167.
+Your pyload instance is now available by going to http://localhost:8000.
 Username: admin Password: admin for pyload
-Username: root  Password: root  for ssh
+
